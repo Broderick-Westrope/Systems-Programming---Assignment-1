@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/ascle/Desktop/UNI/SP1/assignment/1/assignment1/IORB.h
+
+C:/Users/ascle/Desktop/UNI/SP1/assignment/1/assignment1/PriComp.h
+
+C:/Users/ascle/Desktop/UNI/SP1/assignment/1/assignment1/SortList.h
+
+C:/Users/ascle/Desktop/UNI/SP1/assignment/1/assignment1/main.c
+stdio.h
+-
+stdlib.h
+C:/Users/ascle/Desktop/UNI/SP1/assignment/1/assignment1/stdlib.h
+time.h
+C:/Users/ascle/Desktop/UNI/SP1/assignment/1/assignment1/time.h
+IORB.h
+C:/Users/ascle/Desktop/UNI/SP1/assignment/1/assignment1/IORB.h
+SortList.h
+C:/Users/ascle/Desktop/UNI/SP1/assignment/1/assignment1/SortList.h
+PriComp.h
+C:/Users/ascle/Desktop/UNI/SP1/assignment/1/assignment1/PriComp.h
+
