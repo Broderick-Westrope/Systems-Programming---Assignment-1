@@ -59,7 +59,7 @@ int main()
                     printf("Cannot sort an empty list!\n");
                     break;
                 }
-                sortList(head, priComp); //Run the sort function
+                head = sortList(&head, priComp); //Run the sort function
                 printf("Sorting Complete.\n");
                 break;
             }
