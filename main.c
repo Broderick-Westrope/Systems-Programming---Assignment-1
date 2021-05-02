@@ -9,15 +9,15 @@
 
 IORB *buildList(int size);
 
-void displayList(IORB *head, int(*prio)(int));
+void displayList(IORB *node, int(*prio)(int));
 
 int main()
 {
-    srand(time(NULL));
-    int done = 0;
-    IORB *head;
+    srand(time(NULL)); //Seed the random function
+    int done = 0; //Make a value to tell if we are done with the program (by default we arent done)
+    IORB *head; //Create a pointer to our head node for later (NULL by default)
 
-    while (done == 0)
+    while (done == 0) //While we aren't done with the program, loop the following
     {
         int choice = 0; //By default, our choice is 0 (Exit)
 
@@ -53,8 +53,6 @@ int main()
                     break;
                 }
                 sortList(&head, priComp); //Run the sort function
-//                rbubble(&head, priComp);
-                printf("Sorting Complete.\n");
                 break;
             }
             case 3:     //Display the list
@@ -68,10 +66,9 @@ int main()
                 done = 1;
             }
         }
-        printf("\n\n"); //Add gaps
+        printf("\n"); //Add gaps
     }
 
-    printf("Program terminated\n");
     return 0;
 }
 
@@ -79,32 +76,33 @@ int main()
 //Recursive function to build a list of nodes of a given size
 IORB *buildList(int size)
 {
-    IORB *this = ((IORB *) malloc(sizeof(IORB))); //Allocate the memory to be used for this node
-    this->base_pri = GenerateBase();
+    IORB *node = ((IORB *) malloc(sizeof(IORB))); //Allocate the memory to be used for node node
+    node->base_pri = GenerateBase();
 
-    char fill[25];
+    char fill[25]; //Create a variable to store our filler text which is of size 25 at most
+    //Copy the request index text and the index value
     snprintf(fill, 25, "This is i/o request %d ", (10 - size));
-    strcpy(this->filler, fill);
+    strcpy(node->filler, fill);
 
     if (size <= 1) //If we have reached the last node to be made
     {
-        this->link = NULL; //Set its link to be NULL (nothing)
+        node->link = NULL; //Set its link to be NULL (nothing)
     }
     else //Else if we are still going
     {
-        //Recursively call BuildList to make another node and set it as the link of this node
-        this->link = (struct iorb *) buildList(size - 1);
+        //Recursively call BuildList to make another node and set it as the link of node node
+        node->link = (struct iorb *) buildList(size - 1);
     }
 
-    return this; //Return this node we have just made
+    return node; //Return node node we have just made
 }
 
-void displayList(IORB *head, int(*prio)(int))
+void displayList(IORB *node, int(*prio)(int))
 {
-    if (head->link == NULL)
+    if (node->link == NULL) //If we've readhed the end of the list, stop the recursion
         return;
 
-    printf("%s Base Priority: %d Priority: %d\n", head->filler, head->base_pri, prio(head->base_pri));
-    head = (IORB *) head->link;
-    displayList(head, priComp);
+    printf("%s Base Priority: %d Priority: %d\n", node->filler, node->base_pri, prio(node->base_pri)); //print the node information
+    node = (IORB *) node->link; //the new node is the next node
+    displayList(node, priComp); //display the next node recursively
 }

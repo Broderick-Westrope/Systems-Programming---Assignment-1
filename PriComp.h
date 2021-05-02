@@ -5,19 +5,20 @@
 #ifndef ASSIGNMENT1_PRICOMP_H
 #define ASSIGNMENT1_PRICOMP_H
 
-int priComp(int _base)
+//Calculate the priority of the node using the base priority
+int priComp(int base)
 {
-    int p = _base + 1;
-    if (p > 99)
-        p = 0;
-    return p;
+    int p = (base * 3) / 2; //The priority is the base times 3, divided by 2
+    if (p > 99) //If the priority is 100 or more
+        p -= 100; //Minus 100 (this adds some methodical randomness to the priority creation)
+    return p; //return our priority
 }
 
+//Generate the base priority using rand
 int GenerateBase()
 {
-    int r = rand() % 99;
-    printf("Random priority is: %d \n", r);
-    return r;
+    int r = rand() % 89 + 10; //get a random 2 digit number
+    return r; //return our random number
 }
 
 #endif //ASSIGNMENT1_PRICOMP_H
