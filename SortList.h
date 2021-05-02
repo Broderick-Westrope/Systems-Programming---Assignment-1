@@ -5,73 +5,59 @@
 #ifndef ASSIGNMENT1_SORTLIST_H
 #define ASSIGNMENT1_SORTLIST_H
 
-IORB *swap(IORB *ptr1, IORB *ptr2)
+IORB *swap(IORB *a, IORB *b, IORB *c)
 {
-    IORB *tmp = ptr2->link;
-    ptr2->link = ptr1;
-    ptr1->link = tmp;
-    return ptr2;
+    if (a != NULL)
+        a->link = c;
+
+    IORB *d = c->link;
+    c->link = b;
+    b->link = d;
+    return c;
 }
 
-int sort(IORB *head)
+IORB *findA(IORB *head, IORB *b)
 {
-    int size = 5;
-
-    for (int i = 0; i < size; i++)
+    IORB *a = NULL;
+    IORB *current = head;
+    while (current != NULL)
     {
-        printf("\nLOOP 1\n");
-        IORB *current = head;
-        int swapped = 0;
-
-        for (int j = 0; j < size - 1; j++)
+        if (current->link == b)
         {
-            printf("\nLOOP 2\n");
-            IORB *n1 = current;
-            IORB *n2 = current->link;
-
-            if (current->link == NULL)
-            {
-                printf("N2/Current's link is null!!!!!!!!!\n");
-            }
-
-            printf("Current Data: %d\n", current->base_pri);
-            printf("Current ID: %d\n", current->link);
-            printf("N1 Data: %d\n", n1->base_pri);
-            printf("N1 ID: %d\n", n1->link);
-            printf("N2 Data: %d\n", n2->base_pri);
-            printf("N2 ID: %d\n", n2->link);
-
-            if (n1->base_pri > n2->base_pri)
-            {
-                printf("Need to switch\n");
-                IORB *temp = n2->link;
-                n2->link = n1;
-                n1->link = temp;
-                current = n2;
-                if (current->link == NULL)
-                {
-                    printf("N2/Current's link is null!!!!!!!!!\n");
-                }
-                swapped = 1;
-                printf("Switched\n");
-            }
-            printf("Past the 'if'\n");
-
-            current = current->link;
-            if (current->link == NULL)
-            {
-                printf("N2/Current's link is null!!!!!!!!!\n");
-            }
-            printf("Changed link\n");
+            a = current;
         }
-        if (swapped == 0)
-        {
-            printf("SORT SUCCESSFUL!!\n");
-            return 1;
-        }
+        current = current->link;
+    }
+    return a;
+}
+
+IORB *RSort(IORB *head, IORB *current, int(*prio)(int))
+{
+    int swapped = 0;
+
+    if (current->link == NULL)
+        return current;
+    else if (current->base_pri > current->link->base_pri)
+    {
+        IORB *a = findA(current, head);
+        current = swap(a, current, current->link);
+        return current;
     }
 
-    return 0;
+    RSort();
+}
+
+void sortList(IORB *head, int(*prio)(int))
+{
+    for (int i = 0; i < 10; i++)
+    {
+        IORB *result = RSort(head, head, prio);
+        if (result == head)
+        {
+            printf("SUCCESS!!!\n");
+            return;
+        }
+    }
 }
 
 #endif //ASSIGNMENT1_SORTLIST_H

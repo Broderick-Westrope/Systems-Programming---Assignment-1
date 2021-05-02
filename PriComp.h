@@ -7,9 +7,9 @@
 
 int priComp(int _base)
 {
-    int p = _base + 1;
+    int p = (_base * 2) / 3;
     if (p > 99)
-        p = 0;
+        p = p - 99;
     return p;
 }
 
