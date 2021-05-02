@@ -16,13 +16,17 @@ C:/Users/ascle/Desktop/UNI/SP1/assignment/Systems-Programming---Assignment-1/mai
 stdio.h
 -
 stdlib.h
-C:/Users/ascle/Desktop/UNI/SP1/assignment/Systems-Programming---Assignment-1/stdlib.h
+-
 time.h
-C:/Users/ascle/Desktop/UNI/SP1/assignment/Systems-Programming---Assignment-1/time.h
+-
+string.h
+-
 IORB.h
 C:/Users/ascle/Desktop/UNI/SP1/assignment/Systems-Programming---Assignment-1/IORB.h
 SortList.h
 C:/Users/ascle/Desktop/UNI/SP1/assignment/Systems-Programming---Assignment-1/SortList.h
 PriComp.h
 C:/Users/ascle/Desktop/UNI/SP1/assignment/Systems-Programming---Assignment-1/PriComp.h
+SortList.h
+C:/Users/ascle/Desktop/UNI/SP1/assignment/Systems-Programming---Assignment-1/SortList.h
 
