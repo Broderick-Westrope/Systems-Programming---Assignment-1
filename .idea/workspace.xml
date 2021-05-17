@@ -13,11 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cf381f55-43c4-41f8-b7b7-07241ed82924" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IORB.h" beforeDir="false" afterPath="$PROJECT_DIR$/IORB.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PriComp.h" beforeDir="false" afterPath="$PROJECT_DIR$/PriComp.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SortList.h" beforeDir="false" afterPath="$PROJECT_DIR$/SortList.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,19 +57,9 @@
     <property name="settings.editor.selected.configurable" value="settings.saveactions" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="assignment1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="/c &quot;start cmd.exe @cmd /k &quot;assignment1.exe&quot;&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/cmake-build-debug" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assignment1" TARGET_NAME="assignment1" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/../../../../../../../Windows/System32/cmd.exe">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -86,6 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1619946389926</updated>
       <workItem from="1619946393910" duration="8045000" />
+      <workItem from="1620000999880" duration="158000" />
+      <workItem from="1620004978911" duration="35000" />
     </task>
     <servers />
   </component>
@@ -102,5 +90,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
